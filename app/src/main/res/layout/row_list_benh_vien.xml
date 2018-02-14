@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/item_back"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/name_benh_vien"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginStart="10dp"
+        android:textSize="16dp"
+        android:textStyle="bold"
+        android:textColor="@color/colorPrimary"
+        android:text="TextView"
+        android:layout_toLeftOf="@+id/button12"
+        android:layout_toStartOf="@+id/button12" />
+
+    <TextView
+        android:id="@+id/dia_chi_bv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/name_benh_vien"
+        android:layout_alignStart="@+id/name_benh_vien"
+        android:layout_below="@+id/button12"
+        android:text="TextView" />
+
+    <Button
+        android:id="@+id/button12"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@+id/name_benh_vien"
+        android:layout_marginEnd="11dp"
+        android:background="@drawable/ic_star_border_black_24dp"
+        android:layout_marginRight="11dp" />
+</RelativeLayout>

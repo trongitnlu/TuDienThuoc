@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "320630668312",
+    "firebase_url": "https://tudienthuoc-118ba.firebaseio.com",
+    "project_id": "tudienthuoc-118ba",
+    "storage_bucket": "tudienthuoc-118ba.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:320630668312:android:931906a9a2a39bc4",
+        "android_client_info": {
+          "package_name": "com.tudien.tudienthuoc"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "320630668312-fpuebeiu5a5n81pdcleblo8peu1igg49.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAD-oOBg4zBGTmJsAAOWpcZGNb3G-tzJKc"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

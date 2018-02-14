@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <item android:title="Từ điển y tế">
+        <menu>
+            <group android:checkableBehavior="single">
+                <item
+                    android:id="@+id/thuoc"
+                    android:icon="@drawable/ic_loupe_black_24dp"
+                    android:title="Danh mục thuốc" />
+                <item
+                    android:id="@+id/benh"
+                    android:icon="@drawable/ic_enhanced_encryption_black_24dp"
+                    android:title="Danh mục bệnh" />
+                <item
+                    android:id="@+id/like"
+                    android:icon="@drawable/ic_favorite_black_24dp"
+                    android:title="Mục yêu thích" />
+                <item
+                    android:id="@+id/nav_manage"
+                    android:icon="@drawable/ic_event_note_black_24dp"
+                    android:title="Ghi chú" />
+                <item
+                    android:id="@+id/timbenhvien"
+                    android:icon="@drawable/ic_local_hospital_black_24dp"
+                    android:title="Tìm bệnh viện" />
+                <item
+                    android:id="@+id/chat"
+                    android:icon="@drawable/ic_forum_black_24dp"
+                    android:title="Chat với bác sĩ" />
+            </group>
+        </menu>
+    </item>
+    <item android:title="Công cụ">
+        <menu>
+            <item
+                android:id="@+id/danhgia"
+                android:icon="@drawable/ic_thumb_up_black_24dp"
+                android:title="Đánh giá" />
+            <item
+                android:id="@+id/nav_share"
+                android:icon="@drawable/ic_menu_share"
+                android:title="Chia sẻ" />
+            <item
+                android:id="@+id/phanhoi"
+                android:icon="@drawable/ic_sms_failed_black_24dp"
+                android:title="Phản hồi" />
+            <item
+                android:id="@+id/capnhatdl"
+                android:icon="@drawable/ic_cloud_download_black_24dp"
+                android:title="Cập nhật dữ liệu" />
+            <item
+                android:id="@+id/about"
+                android:icon="@drawable/ic_public_black_24dp"
+                android:title="Thông tin ứng dụng" />
+        </menu>
+    </item>
+
+</menu>
