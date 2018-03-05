@@ -1,19 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.tudien.tudienthuoc">
-    <!--Map-->
+
+    <!-- Map -->
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
-    <!--endMaps-->
+    <!-- endMaps -->
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.VIBRATE" />
+
     <!--
          The ACCESS_COARSE/FINE_LOCATION permissions are not required to use
          Google Maps Android API v2, but you must specify either coarse or fine
          location permissions for the 'MyLocation' functionality. 
     -->
-
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -27,6 +28,7 @@
             <meta-data
                 android:name="android.app.searchable"
                 android:resource="@xml/searchable" />
+
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -78,19 +80,11 @@
         <meta-data
             android:name="com.google.android.geo.API_KEY"
             android:value="@string/google_maps_key" />
+
         <uses-feature
             android:glEsVersion="0x00020000"
             android:required="true" />
 
-        <activity
-            android:name=".MapsActivity"
-            android:label="@string/title_activity_maps">
-
-
-            <meta-data
-                android:name="com.google.android.maps.v2.API_KEY"
-                android:value="AIzaSyDtSIHAZPe_I50nrRopUvMOxoMkd87FP3U" />
-        </activity>
         <activity android:name=".NotificationActivity" />
 
         <service android:name=".service.FirebaseMsgService">
@@ -104,14 +98,15 @@
             </intent-filter>
         </service>
 
-        <activity android:name=".QuangCao"></activity>
+        <activity android:name=".QuangCao" />
         <activity android:name=".SendMailActivity" />
         <activity
             android:name=".BeginActivity"
-            android:theme="@style/AppTheme.NoActionBar">
-
-        </activity>
-        <activity android:name=".AboutActivity"></activity>
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity android:name=".AboutActivity" />
+        <activity
+            android:name=".MapsActivity"
+            android:label="@string/title_activity_maps"></activity>
     </application>
 
 </manifest>

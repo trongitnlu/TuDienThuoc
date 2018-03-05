@@ -87,10 +87,11 @@ public class ListBenh extends ArrayAdapter<Benh> implements ListViewAdapter {
     private void setBackgroudButton(Button button, Benh benh) {
         BookmarkModel bookmarkModel = new BookmarkModel(benh.id, benh.name);
         Drawable first = context.getResources().getDrawable(R.drawable.ic_favorite_border_black_24dp);
-        if (button.getTextSize() == 2.0) {
+        if (button.getTextDirection()== 2) {
             first = context.getResources().getDrawable(R.drawable.ic_favorite_black_24dp);
             button.setBackground(first);
-            button.setTextSize(2);
+            button.setTextDirection(1);
+
 
             DbAssetBookmark assetBookmark = new DbAssetBookmark(activity);
             assetBookmark.insertLikeBenh(benh);
@@ -99,7 +100,8 @@ public class ListBenh extends ArrayAdapter<Benh> implements ListViewAdapter {
             TabYeuThich.LISTBOOKMARLIKE.notifyDataSetChanged();
         } else {
             button.setBackground(context.getResources().getDrawable(R.drawable.ic_favorite_border_black_24dp));
-            button.setTextSize(1);
+            button.setTextDirection(2);
+
             DbAssetBookmark assetBookmark = new DbAssetBookmark(activity);
             assetBookmark.deleteLikeBenh(benh.id);
             assetBookmark = new DbAssetBookmark(activity);

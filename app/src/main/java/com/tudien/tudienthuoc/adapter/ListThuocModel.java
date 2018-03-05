@@ -13,6 +13,7 @@ import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.tudien.tudienthuoc.ChiTietThuocActivity;
 import com.tudien.tudienthuoc.LoaiThuocActivity;
@@ -88,14 +89,15 @@ public class ListThuocModel extends ArrayAdapter<ThuocModel> {
         }
         return convertView;
     }
-
     private void setBackgroudButton(Button button, ThuocModel thuocModel) {
+        Toast.makeText(context, "Click", Toast.LENGTH_SHORT).show();
+
         BookmarkModel bookmarkModel = new BookmarkModel(thuocModel.id, thuocModel.name);
         Drawable first = context.getResources().getDrawable(R.drawable.ic_favorite_border_black_24dp);
-        if (button.getTextSize() == 2.0) {
+        if (button.getTextDirection() == 1) {
             first = context.getResources().getDrawable(R.drawable.ic_favorite_black_24dp);
             button.setBackground(first);
-            button.setTextSize(2);
+            button.setTextDirection(2);
 
             DbAssetBookmark assetBookmark = new DbAssetBookmark(activity);
             assetBookmark.insertLikeThuoc(thuocModel, LoaiThuocActivity.IDNHOM);
@@ -104,7 +106,7 @@ public class ListThuocModel extends ArrayAdapter<ThuocModel> {
             TabYeuThich.LISTBOOKMARLIKE.notifyDataSetChanged();
         } else {
             button.setBackground(context.getResources().getDrawable(R.drawable.ic_favorite_border_black_24dp));
-            button.setTextSize(1);
+            button.setTextDirection(1);
             DbAssetBookmark assetBookmark = new DbAssetBookmark(activity);
             assetBookmark.deleteLikeThuoc(thuocModel.id);
             assetBookmark = new DbAssetBookmark(activity);

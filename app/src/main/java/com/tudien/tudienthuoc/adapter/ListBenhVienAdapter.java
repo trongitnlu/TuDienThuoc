@@ -12,6 +12,7 @@ import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.Filter;
 import android.widget.TextView;
+
 import com.tudien.tudienthuoc.MapsActivity;
 import com.tudien.tudienthuoc.R;
 import com.tudien.tudienthuoc.controller.ListViewAdapter;

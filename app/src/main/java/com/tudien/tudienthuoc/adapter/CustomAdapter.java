@@ -87,13 +87,13 @@ public class CustomAdapter extends ArrayAdapter<NhomThuoc> {
     }
     private void setBackgroudButton(Button button){
          Drawable first = context.getResources().getDrawable(R.drawable.ic_favorite_border_black_24dp);
-        if(button.getTextSize()==2.0){
+        if(button.getTextDirection()==2){
             first = context.getResources().getDrawable(R.drawable.ic_favorite_black_24dp);
             button.setBackground(first);
-            button.setTextSize(2);
+            button.setTextDirection(1);
         }else{
             button.setBackground(context.getResources().getDrawable(R.drawable.ic_favorite_border_black_24dp));
-            button.setTextSize(1);
+            button.setTextDirection(2);
            // button.setBackground(first);
 
         }

@@ -58,10 +58,11 @@ public class ChiTietBenhActivity extends AppCompatActivity {
     private void setBackgroudButton(Button button, Benh benh) {
         BookmarkModel bookmarkModel = new BookmarkModel(benh.id, benh.name);
         Drawable first = getResources().getDrawable(R.drawable.ic_favorite_border_black_24dp);
-        if (button.getTextSize() == 2.0) {
+        if (button.getTextDirection()==2) {
             first = getResources().getDrawable(R.drawable.ic_favorite_black_24dp);
             button.setBackground(first);
-            button.setTextSize(2);
+            button.setTextDirection(1);
+
 
             DbAssetBookmark assetBookmark = new DbAssetBookmark(this);
             assetBookmark.insertLikeBenh(benh);
@@ -70,7 +71,7 @@ public class ChiTietBenhActivity extends AppCompatActivity {
             TabYeuThich.LISTBOOKMARLIKE.notifyDataSetChanged();
         } else {
             button.setBackground(getResources().getDrawable(R.drawable.ic_favorite_border_black_24dp));
-            button.setTextSize(1);
+            button.setTextDirection(2);
             DbAssetBookmark assetBookmark = new DbAssetBookmark(this);
             assetBookmark.deleteLikeBenh(benh.id);
             assetBookmark = new DbAssetBookmark(this);

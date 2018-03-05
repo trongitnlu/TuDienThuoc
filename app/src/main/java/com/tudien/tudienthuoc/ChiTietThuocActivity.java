@@ -94,10 +94,10 @@ public class ChiTietThuocActivity extends AppCompatActivity {
     private void setBackgroudButton(Button button, ThuocModel thuocModel) {
         BookmarkModel bookmarkModel = new BookmarkModel(thuocModel.id, thuocModel.name);
         Drawable first = getResources().getDrawable(R.drawable.ic_favorite_border_black_24dp);
-        if (button.getTextSize() == 2.0) {
+        if (button.getTextDirection()==2) {
             first = getResources().getDrawable(R.drawable.ic_favorite_black_24dp);
             button.setBackground(first);
-            button.setTextSize(2);
+            button.setTextDirection(1);
 
             DbAssetBookmark assetBookmark = new DbAssetBookmark(this);
             assetBookmark.insertLikeThuoc(thuocModel, LoaiThuocActivity.IDNHOM);
@@ -106,7 +106,8 @@ public class ChiTietThuocActivity extends AppCompatActivity {
             TabYeuThich.LISTBOOKMARLIKE.notifyDataSetChanged();
         } else {
             button.setBackground(getResources().getDrawable(R.drawable.ic_favorite_border_black_24dp));
-            button.setTextSize(1);
+            button.setTextDirection(2);
+
             DbAssetBookmark assetBookmark = new DbAssetBookmark(this);
             assetBookmark.deleteLikeThuoc(thuocModel.id);
             assetBookmark = new DbAssetBookmark(this);
